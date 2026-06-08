@@ -13,15 +13,20 @@
 
 <body>
 
-     <!-- HEADER & NAVIGASI -->
     <header class="navbar">
         <div class="container navbar-inner">
             <a href="index.html" class="logo">🎓 SILA</a>
+            <input type="checkbox" id="navToggle" class="nav-toggle">
+            <label for="navToggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="index.html" >Beranda</a></li>
+                    <li><a href="index.html">Beranda</a></li>
                     <li><a href="layanan.html">Ajukan Layanan</a></li>
-                    <li><a href="riwayat.html"class="active">Riwayat</a></li>
+                    <li><a href="riwayat.html" class="active">Riwayat</a></li>
                 </ul>
             </nav>
         </div>
@@ -31,58 +36,35 @@
         <section class="section">
             <div class="container">
                 <h1>Riwayat Pengajuan</h1>
-                
-                <!-- tables!-->
-                 <table class="data-table"> 
-    <caption>Daftar Semua Pengajuan Layanan Akademik </caption>
-    <thead> 
-        <tr> 
-            <th>No</th> 
-            <th>Nama</th> 
-            <th>NIM</th> 
-            <th>Layanan</th> 
-            <th>Tanggal</th> 
-            <th>Status</th> 
-        </tr> 
-    </thead> 
-    <tbody> 
-        <!-- Data isian akan ditaruh di sini --> 
-    </tbody> 
-     <tbody> 
-        <tr> 
-            <td>1</td> 
-            <td>Latiung Hutabarat</td> 
-            <td>241121754</td> 
-            <td>SKA</td> 
-            <td>20 Feb 2026</td> 
-            <td>Diproses</td> 
-        </tr> 
-        <tr> 
-            <td>2</td> 
-            <td>Ahmad Fahrul</td> 
-            <td>241121098</td> 
-            <td>CAK</td> 
-            <td>21 Feb 2026</td> 
-            <td>Diproses</td> 
-        </tr> 
-        <tr> 
-            <td>3</td> 
-            <td>Amoy Tarigan</td> 
-            <td>241121547</td> 
-            <td>TNM</td> 
-            <td>22 Feb 2026</td> 
-            <td>Selesai</td> 
-        </tr>
-         <td>4</td> 
-            <td>Amsyong Djambir </td> 
-            <td>241121777</td> 
-            <td>PDA</td> 
-            <td>23 Feb 2026</td> 
-            <td>Diproses</td> 
-        </tr> 
-    </tbody> 
-    </table>
-                <a href="index.html" class="btn btn-outline">← Kembali ke Beranda</a>
+                <p class="section-desc">Daftar semua pengajuan layanan akademik yang telah Anda buat.</p>
+
+                <div class="toolbar">
+                    <span id="dataCount">0 pengajuan</span>
+                    <button id="btnHapusSemua" class="btn btn-outline" style="display: none;">🗑 Hapus Semua</button>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>NIM</th>
+                                <th>Layanan</th>
+                                <th>Tanggal</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <!-- Data diisi oleh JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="emptyState" class="empty-state" style="display: none;">
+                    <p>🗂️ Belum ada pengajuan.</p>
+                    <a href="layanan.html" class="btn btn-primary">➕ Ajukan Layanan</a>
+                </div>
             </div>
         </section>
     </main>
@@ -93,11 +75,13 @@
                 <strong>🎓 SILA</strong>
                 <p>Platform digital untuk pengajuan layanan akademik mahasiswa.</p>
             </div>
-            <div>
+            <div class="footer-nav">
                 <h4>Navigasi</h4>
-                <a href="index.html">Beranda</a>
-                <a href="layanan.html">Ajukan Layanan</a>
-                <a href="riwayat.html"class="active">Riwayat</a>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="layanan.html">Ajukan Layanan</a></li>
+                    <li><a href="riwayat.html">Riwayat</a></li>
+                </ul>
             </div>
         </div>
         <div class="footer-bottom">
@@ -106,9 +90,9 @@
             </div>
         </div>
     </footer>
-    
-    <script src="js/script.js"> </script>
 
-    </body>
+    <script src="js/script.js"></script>
 
-    </html>
+</body>
+
+</html>
